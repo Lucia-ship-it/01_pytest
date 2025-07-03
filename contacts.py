@@ -50,6 +50,7 @@ def remove_contact(name: str):
     raise KeyError(f"Kontakt '{name}' nebyl nalezen.")
 
 
+
 def get_contact(name: str) -> str:
     """
     Vrátí telefonní číslo kontaktu podle zadaného jména.
@@ -59,16 +60,14 @@ def get_contact(name: str) -> str:
 
     Returns:
         str: Telefonní číslo kontaktu.
-
-    Raises:
-        KeyError: Pokud kontakt s daným jménem nebyl nalezen.
     """
     # projdi všechny slovníky uložené v listu contacts
-
+    for contact in contacts:
     # pokud nějaký slovník má klíč "name" s hodnotou name z parametru funkce, pak ho celý vrať
-
+        if contact["name"] == name:
+            return contact 
     # poud dojedeš až na konec, vrať None
-
+    return None
 
 def list_contacts() -> list:
     """
