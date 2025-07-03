@@ -1,1 +1,0 @@
-tento repozitár je vlastne lekcia na pytest s poznamkami a postupnzmi krokmi. Hlavným dokumentom je: test_example.py
